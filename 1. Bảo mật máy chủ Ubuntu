@@ -1,8 +1,8 @@
 I. Sử dụng tài khoản non-root
-        # sudo adduser username
-        # sudo usermod -aG sudo username
-        # sudo su - username
-        # sudo whoami
+         sudo adduser test  # Tạo tk với tên user là test
+         sudo usermod -aG sudo test # add user test vào nhóm sudo
+         sudo su - test # đăng nhập user test
+         sudo whoami
 II. Đổi Port máy chủ Linux
         # sudo nano /etc/ssh/sshd_config
   - Tìm đến dòng chứa thông tin Port (mặc định Port 22) Thay thế số  22 bằng bất kỳ giá trị nào từ 1024 đến 65536, xóa biểu tượng # trước Port nếu có
