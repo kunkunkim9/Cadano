@@ -15,8 +15,21 @@ II. Đổi Port máy chủ Linux
 III. Sử dụng SSH keys
   1 Mã hóa RSA.
         # ssh-keygen -t rsa -b 4096
- -Chuyển khóa công khai -public key tới server. Cập nhật lại tên khóa bằng lệnh
-        # ssh-copy-id -i $HOME/.ssh/<keyname>.pub cardano@server.public.ip.address
+  - Chuyển khóa RSA tới server. Cập nhật lại tên khóa bằng lệnh
+        # ssh-copy-id -i $HOME/.ssh/<keyname>.pub test@server.public.ip.address
+  - Đăng nhập vào máy chủ với tài khoản test
+        # ssh test@server.public.ip.address
+  - Cấm tài khoản root đăng nhập.
+        # sudo nano /etc/ssh/sshd_config
+         - Tìm đến dòng ChallengeResponseAuthentication và sửa thành no
+         - Tìm đến dòng PasswordAuthentication và sửa thành no
+         - Tìm đến dòn PermitRootLogin và sửa thành prohibit-password
+         - Tìm đến dòng PermitEmptyPasswords và sửa thành no
+
+
+         
+
+
 
 
 
