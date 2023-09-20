@@ -13,6 +13,11 @@ II. Đổi Port máy chủ Linux
         # sudo ufw allow <PORT_NUMBER>/tcp
         # sudo ufw reload
 III. Sử dụng SSH keys
+  1 Mã hóa RSA.
+        # ssh-keygen -t rsa -b 4096
+ -Chuyển khóa công khai -public key tới server. Cập nhật lại tên khóa bằng lệnh
+        # ssh-copy-id -i $HOME/.ssh/<keyname>.pub cardano@server.public.ip.address
+
 
 
 
